@@ -1,5 +1,5 @@
 @media screen and (max-width: 799px) {
-    .heeading {
+    .heading {
         font-size: 32px;
     }
     .container {
@@ -21,6 +21,7 @@
         text-align: center;
         height: auto;
         padding-top: 100px;
+        padding-bottom: 50px;
 
         .container {
             flex-direction: column-reverse;
@@ -62,8 +63,37 @@
             .products {
                 .product {
                     width: 49%;
+
+                    .product-data {
+                        .title {
+                            font-size: 14px;
+                        }
+                        .summary {
+                            display: none;
+                        }
+
+                        .pricing {
+                            margin-top: 10px;
+                            flex-direction: column;
+                            gap: 10px;
+                        }
+                    }
                 }
             }
+        }
+    }
+
+    .call-to-action {
+        padding: 0 20px 80px 20px;
+        .container {
+            padding: 50px 30px;
+        }
+    }
+
+    .contact-section {
+        padding: 0 20px 80px 20px;
+        .container {
+            padding: 50px 20px;
         }
     }
 }

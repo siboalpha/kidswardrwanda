@@ -1,5 +1,5 @@
 @media screen and (max-width: 799px) {
-  .heeading {
+  .heading {
     font-size: 32px;
   }
   .container {
@@ -18,6 +18,7 @@
     text-align: center;
     height: auto;
     padding-top: 100px;
+    padding-bottom: 50px;
   }
   .hero .container {
     flex-direction: column-reverse;
@@ -49,5 +50,28 @@
   }
   .products-gallery .container .products .product {
     width: 49%;
+  }
+  .products-gallery .container .products .product .product-data .title {
+    font-size: 14px;
+  }
+  .products-gallery .container .products .product .product-data .summary {
+    display: none;
+  }
+  .products-gallery .container .products .product .product-data .pricing {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .call-to-action {
+    padding: 0 20px 80px 20px;
+  }
+  .call-to-action .container {
+    padding: 50px 30px;
+  }
+  .contact-section {
+    padding: 0 20px 80px 20px;
+  }
+  .contact-section .container {
+    padding: 50px 20px;
   }
 }/*# sourceMappingURL=mobile.css.map */
