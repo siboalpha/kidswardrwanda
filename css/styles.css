@@ -160,13 +160,6 @@ button {
 
 .about {
   padding-bottom: 80px;
-  position: relative;
-}
-.about::before {
-  content: url("/img/pattern_memphis-6_1_2_0-0_0_1__ffffff00_805ad5_e91e63_03a9f4_ecc94b(1).png");
-  position: absolute;
-  top: -150px;
-  left: 200px;
 }
 .about .container .col-right {
   align-items: flex-start;
@@ -254,4 +247,82 @@ button {
 }
 .call-to-action .container .heading {
   color: #ffffff;
+}
+
+.contact-section {
+  padding-bottom: 80px;
+}
+.contact-section .container {
+  background: url("/img/wooden building-blocks.jpg");
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(24, 24, 24, 0.8666666667);
+  background-blend-mode: overlay;
+  border-radius: 8px;
+  padding: 50px 100px;
+  color: #ffffff;
+}
+.contact-section .container .heading {
+  color: #ffffff;
+}
+.contact-section .container .col-left .addresses {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-section .container .col-left .addresses li {
+  background-color: rgba(222, 125, 93, 0.1960784314);
+  padding: 5px 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #DE7E5D;
+  color: #ffffff;
+  padding: 80px 0;
+}
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+footer .container {
+  flex-direction: column;
+  gap: 20px;
+}
+footer .container .top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .container .top .col {
+  width: 30%;
+  background-color: #d67656;
+  padding: 20px;
+  border-radius: 8px;
+}
+footer .container .top .col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+footer .container .buttom {
+  background-color: #d67656;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+}
+footer .container .buttom .socials {
+  display: flex;
+  gap: 15px;
+}
+footer .container .buttom .socials a {
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }/*# sourceMappingURL=styles.css.map */

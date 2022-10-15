@@ -52,4 +52,18 @@
             }
         }
     }
+
+    .products-gallery {
+        .container {
+            .products-intro {
+                margin: 0;
+            }
+
+            .products {
+                .product {
+                    width: 49%;
+                }
+            }
+        }
+    }
 }

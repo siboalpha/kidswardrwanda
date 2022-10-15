@@ -44,4 +44,10 @@
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .products-gallery .container .products-intro {
+    margin: 0;
+  }
+  .products-gallery .container .products .product {
+    width: 49%;
+  }
 }/*# sourceMappingURL=mobile.css.map */
