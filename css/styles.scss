@@ -104,6 +104,7 @@ button {
     padding: 15px 25px;
     border: none;
     border-radius: $border-radius;
+    width: fit-content;
 }
 
 .btn-primary {
@@ -152,6 +153,7 @@ button {
     justify-content: center;
 
     .container {
+        gap: 50px;
         .col-left {
             .heading {
                 font-size: 60px;

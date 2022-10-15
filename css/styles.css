@@ -88,6 +88,9 @@ button {
   padding: 15px 25px;
   border: none;
   border-radius: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .btn-primary {
@@ -130,6 +133,9 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.hero .container {
+  gap: 50px;
 }
 .hero .container .col-left .heading {
   font-size: 60px;
