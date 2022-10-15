@@ -96,4 +96,21 @@
             padding: 50px 20px;
         }
     }
+
+    footer {
+        .container {
+            .top {
+                gap: 20px;
+                .col {
+                    width: 100%;
+                }
+            }
+
+            .buttom {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+        }
+    }
 }
