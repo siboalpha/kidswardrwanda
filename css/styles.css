@@ -47,6 +47,8 @@ form .form-input .form-control {
   width: 100%;
   padding: 12px;
   margin-bottom: 10px;
+  border-radius: 8px;
+  border: none;
 }
 form .form-input input textarea {
   border-radius: 8px;
@@ -331,4 +333,29 @@ footer .container .buttom .socials a {
   display: flex;
   gap: 5px;
   align-items: center;
+}
+
+.prouct-details {
+  padding-top: 150px;
+}
+.prouct-details .container .col-right {
+  align-items: flex-start;
+  gap: 20px;
+}
+.prouct-details .container .col-right .top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.prouct-details .container .col-right .top .product-title {
+  font-size: 32px;
+}
+.prouct-details .container .col-right .category h4 {
+  text-decoration: underline;
+}
+
+.shop-page {
+  padding-top: 150px;
 }/*# sourceMappingURL=styles.css.map */

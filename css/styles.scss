@@ -63,6 +63,8 @@ form {
             width: 100%;
             padding: 12px;
             margin-bottom: 10px;
+            border-radius: $border-radius;
+            border: none;
         }
 
         input textarea {
@@ -401,4 +403,40 @@ footer {
             }
         }
     }
+}
+
+//product details
+
+.prouct-details {
+    padding-top: 150px;
+
+    .container {
+        .col-right {
+            align-items: flex-start;
+            gap: 20px;
+            .top {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .product-title {
+                    font-size: 32px;
+                }
+            }
+
+            .category {
+                h4 {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+//shop page
+
+.shop-page {
+    padding-top: 150px;
 }

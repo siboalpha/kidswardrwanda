@@ -85,4 +85,15 @@
     align-items: flex-start;
     gap: 20px;
   }
+  .prouct-details {
+    padding: 100px 0;
+  }
+  .prouct-details .container {
+    gap: 20px;
+  }
+  .prouct-details .container .col-right .top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
 }/*# sourceMappingURL=mobile.css.map */

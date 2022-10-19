@@ -40,7 +40,7 @@
     link.addEventListener("click", (e) => {
       e.preventDefault()
 
-      id = e.currentTarget.getAttribute("href").slice(1);
+      id = e.currentTarget.getAttribute("href").slice(2);
       element = document.getElementById(id)
 
       const navBarHeight = navBar.getBoundingClientRect().height + 50
