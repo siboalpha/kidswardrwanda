@@ -93,6 +93,9 @@ button {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
 }
 
 .btn-primary {
