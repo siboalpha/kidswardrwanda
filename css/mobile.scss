@@ -15,6 +15,14 @@
         }
     }
 
+    form {
+        width: 100%;
+        .half {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
     //Hero section
 
     .hero {

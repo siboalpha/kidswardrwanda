@@ -21,6 +21,7 @@ li {
 
 a {
   color: #DE7E5D;
+  text-decoration: none;
 }
 
 img {
@@ -29,7 +30,7 @@ img {
 
 form .form-input .submit-btn {
   padding: 12px 25px;
-  border: none;
+  border: 1px solid transparent;
   font-weight: bold;
   text-transform: capitalize;
   background-color: #DE7E5D;
@@ -40,8 +41,9 @@ form .form-input .submit-btn {
   transition: linear 0.2s;
 }
 form .form-input .submit-btn:hover {
-  background-color: #0074D9;
+  background-color: transparent;
   color: #ffffff;
+  border: 1px solid #ffffff;
 }
 form .form-input .form-control {
   width: 100%;
@@ -104,9 +106,24 @@ button {
   font-size: 16px;
   transition: linear 0.2s;
   border-radius: 8px;
+  border: 1px solid transparent;
 }
 .btn-primary:hover {
-  background-color: #0074D9;
+  background-color: transparent;
+  color: #DE7E5D;
+  border: 1px solid #DE7E5D;
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: #DE7E5D;
+  border: 1px solid transparent;
+  transition: linear 0.2s;
+}
+.btn-secondary:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
 }
 
 .container {

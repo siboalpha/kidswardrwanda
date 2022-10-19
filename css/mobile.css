@@ -14,6 +14,13 @@
     width: 100%;
     gap: 20px;
   }
+  form {
+    width: 100%;
+  }
+  form .half {
+    display: flex;
+    flex-direction: column;
+  }
   .hero {
     text-align: center;
     height: auto;
