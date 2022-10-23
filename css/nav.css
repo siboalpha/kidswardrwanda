@@ -28,7 +28,7 @@
 }
 
 .contact-btn {
-  background-color: #DE7E5D;
+  background-color: #fdbfcc;
   border: none;
   padding: 15px 25px;
   border-radius: 8px;
@@ -181,7 +181,7 @@ nav ul li ul li a {
   border-radius: 1px;
   height: 5px;
   width: 35px;
-  background: #DE7E5D;
+  background: #fdbfcc;
   position: absolute;
   display: block;
   content: "";

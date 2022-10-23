@@ -3,12 +3,14 @@ $breakpoint: 799px;
 $nav-height: 70px;
 $dark-color: #000000;
 $white: #ffffff;
-$primary-color: #DE7E5D;
-$secondary-color:#0074D9; 
+//$primary-color: #DE7E5D;
+$primary-color: #fdbfcc;
+//$secondary-color: #0074D9;
+$secondary-color: #1bb4d4;
 $border-radius: 8px;
 $whitesmoke: whitesmoke;
 $body-font-size: 16px;
-
+$text-color: gray;
 //New Navigation
 .navigation {
     position: fixed;
