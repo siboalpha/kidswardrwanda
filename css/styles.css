@@ -20,7 +20,7 @@ li {
 }
 
 a {
-  color: #fdbfcc;
+  color: #1bb4d4;
   text-decoration: none;
 }
 
@@ -33,7 +33,7 @@ form .form-input .submit-btn {
   border: 1px solid transparent;
   font-weight: bold;
   text-transform: capitalize;
-  background-color: #fdbfcc;
+  background-color: #1bb4d4;
   color: #ffffff;
   border-radius: 8px;
   font-size: medium;
@@ -81,11 +81,11 @@ form .half {
 }
 
 .blue {
-  color: #1bb4d4;
+  color: #fdbfcc;
 }
 
 .peach {
-  color: #fdbfcc;
+  color: #1bb4d4;
 }
 
 button {
@@ -101,7 +101,7 @@ button {
 }
 
 .btn-primary {
-  background-color: #fdbfcc;
+  background-color: #1bb4d4;
   color: #ffffff;
   font-size: 16px;
   transition: linear 0.2s;
@@ -110,13 +110,13 @@ button {
 }
 .btn-primary:hover {
   background-color: transparent;
-  color: #fdbfcc;
-  border: 1px solid #fdbfcc;
+  color: #1bb4d4;
+  border: 1px solid #1bb4d4;
 }
 
 .btn-secondary {
   background-color: #ffffff;
-  color: #fdbfcc;
+  color: #1bb4d4;
   border: 1px solid transparent;
   transition: linear 0.2s;
 }
@@ -248,7 +248,7 @@ button {
 }
 .products-gallery .container .products .product .product-data .pricing a button {
   padding: 10px 25px;
-  background-color: #fdbfcc;
+  background-color: #1bb4d4;
   color: #ffffff;
 }
 .products-gallery .container .products .product .product-data .pricing a button span {
@@ -265,7 +265,7 @@ button {
   padding-bottom: 80px;
 }
 .call-to-action .container {
-  background-color: #fdbfcc;
+  background-color: #1bb4d4;
   color: #ffffff;
   flex-direction: column;
   gap: 30px;
@@ -308,7 +308,7 @@ button {
 }
 
 footer {
-  background-color: #fdbfcc;
+  background-color: #1bb4d4;
   color: #ffffff;
   padding: 80px 0;
 }
@@ -327,7 +327,7 @@ footer .container .top {
 }
 footer .container .top .col {
   width: 30%;
-  background-color: #eaa8b7;
+  background-color: #18a8c5;
   padding: 20px;
   border-radius: 8px;
 }
@@ -337,7 +337,7 @@ footer .container .top .col ul {
   gap: 5px;
 }
 footer .container .buttom {
-  background-color: #eaa8b7;
+  background-color: #18a8c5;
   width: 100%;
   padding: 20px;
   display: flex;
