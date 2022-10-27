@@ -1,0 +1,468 @@
+$content-width: 1200px;
+$breakpoint: 799px;
+$nav-height: 70px;
+$dark-color: #000000;
+$white: #ffffff;
+//$primary-color: #DE7E5D;
+$primary-color: #ca8191;
+//$secondary-color: #0074D9;
+$secondary-color: #1bb4d4;
+$border-radius: 8px;
+$whitesmoke: whitesmoke;
+$body-font-size: 16px;
+$text-color: gray;
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 17px;
+    color: $text-color;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+form {
+    .form-input {
+        .submit-btn {
+            padding: 12px 25px;
+            border: 1px solid transparent;
+            font-weight: bold;
+            text-transform: capitalize;
+            background-color: $primary-color;
+            color: $white;
+            border-radius: $border-radius;
+            font-size: medium;
+            margin-top: 10px;
+            transition: linear 0.2s;
+
+            &:hover {
+                background-color: transparent;
+                color: $white;
+                border: 1px solid $white;
+            }
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: $border-radius;
+            border: 1px solid $primary-color;
+        }
+
+        input textarea {
+            border-radius: $border-radius;
+            outline: none;
+            border: 1px solid $text-color;
+
+            &::placeholder {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .full {
+        display: grid;
+    }
+
+    .half {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        gap: 4%;
+    }
+}
+
+.heading {
+    color: $dark-color;
+    font-size: 40px;
+}
+
+.blue {
+    color: $secondary-color;
+}
+
+.peach {
+    color: $primary-color;
+}
+
+button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: $border-radius;
+    width: fit-content;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.btn-primary {
+    background-color: $primary-color;
+    color: $white;
+    font-size: $body-font-size;
+    transition: linear 0.2s;
+    border-radius: $border-radius;
+    border: 1px solid transparent;
+
+    &:hover {
+        background-color: transparent;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+    }
+}
+
+.btn-secondary {
+    background-color: $white;
+    color: $primary-color;
+    border: 1px solid transparent;
+    transition: linear 0.2s;
+
+    &:hover {
+        background-color: transparent;
+        color: $white;
+        border: 1px solid $white;
+    }
+
+}
+
+.container {
+    margin: auto;
+    max-width: $content-width;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+
+    .col-left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .col-right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 30px;
+
+    }
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+        gap: 50px;
+        .col-left {
+            .heading {
+                font-size: 60px;
+            }
+
+            .info {
+                ul {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    li {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        background-color: $whitesmoke;
+                        padding: 5px 10px;
+                        border-radius: $border-radius;
+
+                        img {
+                            max-width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .col-right {
+            position: relative;
+
+            img {
+                width: 90%;
+                border-radius: $border-radius;
+            }
+        }
+    }
+}
+
+//About section
+
+.about {
+    padding-bottom: 80px;
+
+    .container {
+        .col-right {
+            align-items: flex-start;
+        }
+    }
+}
+
+//Products gallery
+
+.products-gallery {
+    padding-bottom: 80px;
+
+    .container {
+        display: block;
+
+        .products-intro {
+            margin-right: 50%;
+        }
+
+        .heading {
+            margin-bottom: 30px;
+        }
+
+        .products {
+            margin: 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1%;
+            row-gap: 20px;
+
+            .product {
+                width: 24.25%;
+                background-color: $whitesmoke;
+                border: 1px solid $whitesmoke;
+                border-radius: $border-radius;
+                transition: linear 0.2s;
+
+                &:hover {
+                    margin-top: -3px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 230px;
+                    object-fit: cover;
+                    border-radius: $border-radius $border-radius 0 0;
+                }
+
+                .product-data {
+                    padding: 20px;
+
+                    .title {
+                        color: $dark-color;
+                        margin-bottom: 10px;
+                    }
+
+                    .pricing {
+                        margin-top: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .price {
+                            color: $dark-color;
+                            font-weight: bold;
+                        }
+
+                        a {
+                            button {
+                                padding: 10px 25px;
+                                background-color: $primary-color;
+                                color: $white;
+
+                                span {
+                                    display: none;
+                                }
+
+                                &:hover {
+                                    transition: linear 0.2s;
+
+                                    span {
+                                        display: inline-block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Call to action
+
+.call-to-action {
+    padding-bottom: 80px;
+
+    .container {
+        background-color: $primary-color;
+        color: $white;
+        flex-direction: column;
+        gap: 30px;
+        padding: 80px;
+        text-align: center;
+        border-radius: $border-radius;
+
+        .heading {
+            color: $white;
+        }
+    }
+}
+
+.contact-section {
+    padding-bottom: 80px;
+
+    .container {
+        background: url("/img/wooden\ building-blocks.jpg");
+        background-position: center;
+        background-size: cover;
+        background-color: #181818dd;
+        background-blend-mode: overlay;
+        border-radius: $border-radius;
+        padding: 50px 100px;
+
+        color: $white;
+
+        .heading {
+            color: $white;
+        }
+
+        .col-left {
+            .addresses {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                li {
+                    background-color: #de7d5d32;
+                    padding: 5px 10px;
+                    width: fit-content;
+                    border-radius: $border-radius;
+                }
+            }
+        }
+
+    }
+}
+
+footer {
+    background-color: $primary-color;
+    color: $white;
+    padding: 80px 0;
+
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+
+        .top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .col {
+                width: 30%;
+                background-color: #b97281;
+                padding: 20px;
+                border-radius: $border-radius;
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                }
+            }
+        }
+
+        .buttom {
+            background-color: #b97281;
+            width: 100%;
+            padding: 20px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: $border-radius;
+
+            .socials {
+                display: flex;
+                gap: 15px;
+
+                a {
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+//product details
+
+.prouct-details {
+    padding-top: 150px;
+
+    .container {
+        .col-right {
+            align-items: flex-start;
+            gap: 20px;
+            padding-bottom: 50px;
+            .top {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .product-title {
+                    font-size: 32px;
+                }
+            }
+
+            .category {
+                h4 {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+//shop page
+
+.shop-page {
+    padding-top: 150px;
+}

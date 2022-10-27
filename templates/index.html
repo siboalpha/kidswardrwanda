@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="hero" id="welcome">
+    <div class="container">
+        <div class="col-left">
+            <h1 class="heading">
+                <span>Play</span> <span class="blue">Whith</span> <span class="peach">Intent</span>
+            </h1>
+            <p>
+                Any wooden toys of 0 months to 3 yesrs old children and all wooden materials for children
+            </p>
+            <a href="{% url 'shop' %}">
+                <button class="btn-primary"><i class="fa fa-shopping-bag"></i> <span>Show now</span></button>
+            </a>
+            <div class="info">
+                <ul>
+                    <li><img src="{% static '/img/logs(1).png' %}" alt=""> <span>Wood</span> </li>
+                    <li><img src="{% static '/img/badge.png' %}" alt=""><span> Durable</span></li>
+                    <li><img src="{% static '/img/children.png' %}" alt=""> <span>For all Kids</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-right">
+            <img src="{% static '/img/two kids playing toys.webp' %}" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="container">
+        <div class="col-left">
+            <img src="{% static '/img/african-american-dad-with-baby-son-playing-bed-home-with-wooden-toy-car-happy-family-father-s-day_267293-4146.jpg' %}"
+                alt="">
+        </div>
+        <div class="col-right">
+            <h1 class="heading"><span class="blue">About</span> The <span class="peach">Company</span></h1>
+            <p>
+                KidsWorldRwanda is a wooden toys manufacturing company in Rwanda aspired to be a leading manufacturer of
+                quality and purposeful toys plus other children's wooden materials aligning with early childhood
+                cognitive development. KidsWorldRwanda is inspired by Montessori .
+            </p>
+
+            <a href="/#contact">
+                <button class="btn-primary">Get in touch</button>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="products-gallery">
+    <div class="container">
+        <h1 class="heading">Popular <span class="peach">toys</span></h1>
+        <p class="products-intro">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem esse porro velit fugiat veritatis, sed
+            mollitia illo similique dicta, quam minima ducimus quaerat consequatur explicabo qui voluptate perspiciatis
+            obcaecati dignissimos?
+        </p>
+        <div class="products">
+            {% for product in products %}
+            <div class="product">
+                <img src="{{product.product_image.url}}" alt="" class="product-img">
+                <div class="product-data">
+                    <h4 class="title">{{product.title}}</h4>
+                    <div class="summary">{{product.description | slice:80}}
+                    </div>
+                    <div class="pricing">
+                        <p class="price">{{product.price}}Rwf</p>
+                        <a href="{% url 'product' product.id %}"><button class="buy-btn">Buy now <span><i
+                                        class="fas fa-cart-plus"></i></span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+
+        <a href="{% url 'shop' %}"><button class="btn-primary"> See more toys</button></a>
+    </div>
+</section>
+
+<section class="call-to-action">
+    <div class="container">
+        <h1 class="heading">Get your toys now</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eum atque necessitatibus illum iure.
+            Repellendus dolor iusto voluptatibus quisquam corporis! Recusandae porro laborum incidunt magnam, atque
+            neque natus ipsa nam!</p>
+        <a href=""><button class="btn-secondary">Get yours now</button></a>
+    </div>
+</section>
+
+<section class="products-gallery">
+    <div class="container">
+        <h1 class="heading">Recently added <span class="peach">toys</span></h1>
+        <p class="products-intro">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem esse porro velit fugiat veritatis, sed
+            mollitia illo similique dicta, quam minima ducimus quaerat consequatur explicabo qui voluptate perspiciatis
+            obcaecati dignissimos?
+        </p>
+        <div class="products">
+            <div class="product">
+                <img src="{% static '/img/some wooden toys.jpg' %}" alt="" class="product-img">
+                <div class="product-data">
+                    <h4 class="title">Wooden hose for kids</h4>
+                    <div class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id recusandae officia.
+                    </div>
+                    <div class="pricing">
+                        <p class="price">5000Rwf</p>
+                        <a href="/"><button class="buy-btn">Buy now <span><i
+                                        class="fas fa-cart-plus"></i></span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="{% static '/img/some wooden toys.jpg' %}" alt="" class="product-img">
+                <div class="product-data">
+                    <h4 class="title">Wooden hose for kids</h4>
+                    <div class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id recusandae officia.
+                    </div>
+                    <div class="pricing">
+                        <p class="price">5000Rwf</p>
+                        <a href="/"><button class="buy-btn">Buy now <span><i
+                                        class="fas fa-cart-plus"></i></span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="{% static '/img/some wooden toys.jpg' %}" alt="" class="product-img">
+                <div class="product-data">
+                    <h4 class="title">Wooden hose for kids</h4>
+                    <div class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id recusandae officia.
+                    </div>
+                    <div class="pricing">
+                        <p class="price">5000Rwf</p>
+                        <a href="/"><button class="buy-btn">Buy now <span><i
+                                        class="fas fa-cart-plus"></i></span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="{% static '/img/some wooden toys.jpg' %}" alt="" class="product-img">
+                <div class="product-data">
+                    <h4 class="title">Wooden hose for kids</h4>
+                    <div class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id recusandae officia.
+                    </div>
+                    <div class="pricing">
+                        <p class="price">5000Rwf</p>
+                        <a href="/"><button class="buy-btn">Buy now <span><i
+                                        class="fas fa-cart-plus"></i></span></button></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="{% url 'shop' %}"><button class="btn-primary"> See more toys</button></a>
+    </div>
+</section>
+
+<section class="call-to-action">
+    <div class="container">
+        <h1 class="heading">Get your toys now</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eum atque necessitatibus illum iure.
+            Repellendus dolor iusto voluptatibus quisquam corporis! Recusandae porro laborum incidunt magnam, atque
+            neque natus ipsa nam!</p>
+        <a href=""><button class="btn-secondary">Get yours now</button></a>
+    </div>
+</section>
+
+<section class="contact-section" id="contact">
+    <div class="container">
+        <div class="col-left">
+            <h1 class="heading">Get in touch with us</h1>
+            <ul class="addresses">
+                <li><i class="fas fa-map-marker-alt"></i> Kigali Rwanda</li>
+                <li><i class="fas fa-building"></i> Makuza Peace Plaza</li>
+                <li><i class="fa fa-envelope"></i> <a href="">info@kidsworldrwanda.com</a></li>
+                <li><i class="fas fa-phone-alt"></i> <a href="">0788 888 888</a></li>
+            </ul>
+
+        </div>
+
+        <div class="col-right">
+            <h1 class="heading">Send us a quick email</h1>
+            <form action="">
+                <div class="form-input half">
+                    <input class="form-control" type="text" placeholder="First name">
+                    <input class="form-control" type="text" placeholder="Last name">
+                    <input class="form-control" type="text" name="" id="" placeholder="Email">
+                    <input type="text" class="form-control" placeholder="Phone number">
+                </div>
+
+                <div class="form-input full">
+                    <textarea class="form-control" name="" id="" rows="5" placeholder="Your message"></textarea>
+                </div>
+                <div class="form-input">
+                    <input class="submit-btn" type="submit" value="Send your message">
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</section>
+{% endblock %}

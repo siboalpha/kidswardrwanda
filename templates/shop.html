@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="products-gallery shop-page">
+    <div class="container">
+        <h1 class="heading">Shop your kid's <span class="peach">favorite wooden toys</span></h1>
+        <p class="products-intro">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem esse porro velit fugiat veritatis, sed
+            mollitia illo similique dicta, quam minima ducimus quaerat consequatur explicabo qui voluptate perspiciatis
+            obcaecati dignissimos?
+        </p>
+        <div class="products">
+            {% for product in products %}
+            <div class="product">
+                <img src="{{product.product_image.url}}" alt="" class="product-img">
+                <div class="product-data">
+                    <h4 class="title">{{product.title}}</h4>
+                    <div class="summary">{{product.description | slice:80}}
+                    </div>
+                    <div class="pricing">
+                        <p class="price">{{product.price}}Rwf</p>
+                        <a href="{% url 'product' product.id %}"><button class="buy-btn">Buy now <span><i
+                                        class="fas fa-cart-plus"></i></span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+{% endblock %}

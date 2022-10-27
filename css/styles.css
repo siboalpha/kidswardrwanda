@@ -358,6 +358,9 @@ footer .container .buttom .socials a {
 .prouct-details {
   padding-top: 150px;
 }
+.prouct-details .container {
+  padding: 50px 0;
+}
 .prouct-details .container .col-right {
   align-items: flex-start;
   gap: 20px;
