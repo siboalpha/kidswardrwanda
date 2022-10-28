@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="order-received">
+    <div class="container">
+        <h1 class="heading">
+            Thank you!
+        </h1>
+
+        <p>
+            Your order have been received, now click "pay now, pay your order"
+        </p>
+
+        <a href="tel:*182*1*1*0788449976*{{total}}#">
+            <button class="btn-primary">pay {{total}} Rwf</button>
+        </a>
+    </div>
+</div>
+
+{% endblock %}

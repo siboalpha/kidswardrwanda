@@ -35,6 +35,7 @@ class Product(models.Model):
 
 class Order(models.Model):
     product = models.ForeignKey(Product, on_delete = models.CASCADE)
+    order_total = models.FloatField(max_length = 255, null=True, default = "0")
     client = models.CharField(max_length = 255)
     client_email = models.CharField(max_length = 255)
     client_phone_number = models.CharField(max_length = 255)

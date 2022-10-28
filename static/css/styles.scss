@@ -466,3 +466,21 @@ footer {
 .shop-page {
     padding-top: 150px;
 }
+
+// Order received
+
+.order-received {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        text-align: center;
+        max-width: 600px;
+
+        flex-direction: column;
+        gap: 30px;
+    }
+}

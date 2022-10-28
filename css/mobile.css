@@ -98,9 +98,15 @@
   .prouct-details .container {
     gap: 20px;
   }
+  .prouct-details .container .col-right #order-form {
+    width: 100%;
+  }
   .prouct-details .container .col-right .top {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+  }
+  div#order-form {
+    width: 100%;
   }
 }/*# sourceMappingURL=mobile.css.map */

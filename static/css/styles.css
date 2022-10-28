@@ -379,4 +379,18 @@ footer .container .buttom .socials a {
 
 .shop-page {
   padding-top: 150px;
+}
+
+.order-received {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.order-received .container {
+  text-align: center;
+  max-width: 600px;
+  flex-direction: column;
+  gap: 30px;
 }/*# sourceMappingURL=styles.css.map */

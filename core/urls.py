@@ -25,7 +25,8 @@ admin.site.index_title = "Welcome to Kids World Rwanda Portal"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('website.urls') )
+    path('', include('website.urls') ),
+    path('admin/clearcache/', include('clearcache.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

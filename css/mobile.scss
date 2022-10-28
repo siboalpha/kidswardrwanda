@@ -129,6 +129,9 @@
         .container {
             gap: 20px;
             .col-right {
+                #order-form {
+                    width: 100%;
+                }
                 .top {
                     flex-direction: column;
                     align-items: flex-start;
@@ -137,4 +140,10 @@
             }
         }
     }
+
+    // Debut for order form
+
+div#order-form {
+    width: 100%;
+}
 }

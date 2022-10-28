@@ -438,6 +438,7 @@ footer {
     .container {
         padding: 50px 0;
         .col-right {
+            width: 100%;
             align-items: flex-start;
             gap: 20px;
             .top {
@@ -465,4 +466,23 @@ footer {
 
 .shop-page {
     padding-top: 150px;
+}
+
+
+
+// Order received
+
+.order-received {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        max-width: 600px;
+
+        flex-direction: column;
+        gap: 30px;
+    }
 }
