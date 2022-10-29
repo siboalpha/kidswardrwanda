@@ -186,16 +186,17 @@
 
         <div class="col-right">
             <h1 class="heading">Send us a quick email</h1>
-            <form action="">
+            <form action="" method="POST">
+                {% csrf_token %}
                 <div class="form-input half">
-                    <input class="form-control" type="text" placeholder="First name">
-                    <input class="form-control" type="text" placeholder="Last name">
-                    <input class="form-control" type="text" name="" id="" placeholder="Email">
-                    <input type="text" class="form-control" placeholder="Phone number">
+                    {{form.first_name}}
+                    {{form.last_name}}
+                    {{form.email}}
+                    {{form.phone_number}}
                 </div>
 
                 <div class="form-input full">
-                    <textarea class="form-control" name="" id="" rows="5" placeholder="Your message"></textarea>
+                    {{form.message}}
                 </div>
                 <div class="form-input">
                     <input class="submit-btn" type="submit" value="Send your message">

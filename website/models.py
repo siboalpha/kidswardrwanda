@@ -41,3 +41,11 @@ class Order(models.Model):
     client_phone_number = models.CharField(max_length = 255)
     client_address = models.CharField(max_length = 255)
     date_created = models.DateTimeField(auto_now_add = True, null = True)
+
+
+class Contact(models.Model):
+    first_name = models.CharField(max_length = 255)
+    last_name = models.CharField(max_length = 255)
+    email = models.EmailField(max_length = 255)
+    phone_number = models.CharField(max_length = 255)
+    message = models.TextField(max_length = 500)

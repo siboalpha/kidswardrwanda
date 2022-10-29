@@ -1,13 +1,17 @@
 from django.shortcuts import redirect, render
 from .models import Product, Order
-from .forms import OrderForm
+from .forms import OrderForm, ContactForm
 # Create your views here.
 
 def index(request):
     page_title = 'Kids World Rwanda | Welcome'
     products = Product.objects.all()
-    context = {'page_title':page_title, 'products':products}
+    form = ContactForm()
+    context = {'page_title':page_title, 'products':products, 'form':form}
     return render(request, 'index.html', context)
+
+def thankYou(request):
+    return render(request, 'thank-you.html')
 
 def shop(request):
     products = Product.objects.all()

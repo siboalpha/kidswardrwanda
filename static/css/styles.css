@@ -66,6 +66,9 @@ form .form-input input textarea:-ms-input-placeholder {
 form .form-input input textarea::placeholder {
   font-size: 18px;
 }
+form .form-input textarea {
+  height: 150px;
+}
 form .full {
   display: grid;
 }
