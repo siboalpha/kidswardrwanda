@@ -14,4 +14,4 @@ class productCategoriesAdmin(admin.ModelAdmin):
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ('product', 'client', 'client_phone_number','client_email')
+    list_display = ('product', 'client', 'client_phone_number','client_email', 'order_total')

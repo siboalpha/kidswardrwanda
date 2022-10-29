@@ -28,11 +28,11 @@ def order(request, pk):
     if request.method == 'POST':
         form = OrderForm(request.POST)
         if form.is_valid():
-            oderfom = form.save(commit = False)
-            oderfom.product = product
-            oderfom.order_total = product.price
-            oderfom.save()
-            instance = product
+            orderfrom = form.save(commit = False)
+            orderfrom.product = product
+            orderfrom.order_total = product.price
+            form.save()
+            instance = form.save()
             return redirect('order-received', pk=instance.pk)
     product_title = product.title
     page_title =  product_title + ' | Kids World Rwanda'
@@ -42,7 +42,7 @@ def order(request, pk):
 
 def orderReceived(request, pk):
     order = Order.objects.get(id=pk)
-    total = float(order.order_total) * 2
+    total = float(order.order_total)
     print(total)
     context = {'order': order, 'total':total}
     return render(request, 'order-received.html', context)
