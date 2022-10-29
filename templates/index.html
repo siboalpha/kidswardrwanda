@@ -59,6 +59,7 @@
         </p>
         <div class="products">
             {% for product in products %}
+            {% if product.placement == 'popular'%}
             <div class="product">
                 <img src="{{product.product_image.url}}" alt="" class="product-img">
                 <div class="product-data">
@@ -72,7 +73,7 @@
                     </div>
                 </div>
             </div>
-
+            {% endif %}
             {% endfor %}
         </div>
 
@@ -99,62 +100,23 @@
             obcaecati dignissimos?
         </p>
         <div class="products">
+            {% for product in products %}
+            {% if product.placement == 'recently added'%}
             <div class="product">
-                <img src="{% static '/img/some wooden toys.jpg' %}" alt="" class="product-img">
+                <img src="{{product.product_image.url}}" alt="" class="product-img">
                 <div class="product-data">
-                    <h4 class="title">Wooden hose for kids</h4>
-                    <div class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id recusandae officia.
+                    <h4 class="title">{{product.title}}</h4>
+                    <div class="summary">{{product.description | slice:80}}
                     </div>
                     <div class="pricing">
-                        <p class="price">5000Rwf</p>
-                        <a href="/"><button class="buy-btn">Buy now <span><i
+                        <p class="price">{{product.price}}Rwf</p>
+                        <a href="{% url 'product' product.id %}"><button class="buy-btn">Buy now <span><i
                                         class="fas fa-cart-plus"></i></span></button></a>
                     </div>
                 </div>
             </div>
-
-            <div class="product">
-                <img src="{% static '/img/some wooden toys.jpg' %}" alt="" class="product-img">
-                <div class="product-data">
-                    <h4 class="title">Wooden hose for kids</h4>
-                    <div class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id recusandae officia.
-                    </div>
-                    <div class="pricing">
-                        <p class="price">5000Rwf</p>
-                        <a href="/"><button class="buy-btn">Buy now <span><i
-                                        class="fas fa-cart-plus"></i></span></button></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="{% static '/img/some wooden toys.jpg' %}" alt="" class="product-img">
-                <div class="product-data">
-                    <h4 class="title">Wooden hose for kids</h4>
-                    <div class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id recusandae officia.
-                    </div>
-                    <div class="pricing">
-                        <p class="price">5000Rwf</p>
-                        <a href="/"><button class="buy-btn">Buy now <span><i
-                                        class="fas fa-cart-plus"></i></span></button></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="{% static '/img/some wooden toys.jpg' %}" alt="" class="product-img">
-                <div class="product-data">
-                    <h4 class="title">Wooden hose for kids</h4>
-                    <div class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id recusandae officia.
-                    </div>
-                    <div class="pricing">
-                        <p class="price">5000Rwf</p>
-                        <a href="/"><button class="buy-btn">Buy now <span><i
-                                        class="fas fa-cart-plus"></i></span></button></a>
-                    </div>
-                </div>
-            </div>
-
+            {% endif %}
+            {% endfor %}
         </div>
 
         <a href="{% url 'shop' %}"><button class="btn-primary"> See more toys</button></a>
@@ -167,7 +129,7 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eum atque necessitatibus illum iure.
             Repellendus dolor iusto voluptatibus quisquam corporis! Recusandae porro laborum incidunt magnam, atque
             neque natus ipsa nam!</p>
-        <a href=""><button class="btn-secondary">Get yours now</button></a>
+        <a href="{% url 'shop' %}"><button class="btn-secondary">Get yours now</button></a>
     </div>
 </section>
 

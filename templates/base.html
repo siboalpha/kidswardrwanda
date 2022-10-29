@@ -31,8 +31,8 @@
                     <li><a href="{% url 'shop' %}" class="">Shop</a></li>
                     <li><a href="/#contact" class="scroll-link">Contact Us</a></li>
                     <li>
-                        <form action="">
-                                <input class="form-control" type="search" name="" id="" placeholder="Search toys">
+                        <form action="{% url 'search' %}" method="GET">
+                                <input class="form-control" type="search" placeholder="Search toys" required name="q" value="{{ query|escape }}"/>
                                 <input class="btn-primary search-btn" type="submit" value="Search">
                         </form>
                     </li>

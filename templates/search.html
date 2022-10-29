@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="search-results">
+    <div class="container">
+        <h1 class="heading">Search Result for: {{query}}</h1>
+        {% for product in products %}
+        <div class="result">
+            <a href="">
+                <div class="result-card">
+                    <img src="/img/rocking-horse.png" alt="">
+                    <div class="result-content">
+                        <h4>Produtct title</h4>
+                        <p>5000Rwf</p>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit vitae ipsa
+                            consequuntur, quo quisquam adipisci ducimus deleniti error. 
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

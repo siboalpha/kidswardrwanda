@@ -488,3 +488,50 @@ footer {
         gap: 30px;
     }
 }
+
+
+//Search Results
+
+.search-results {
+    padding: 100px 0;
+    .container {
+        width: 60%;
+        flex-direction: column;
+        text-align: start;
+        justify-content: start;
+        align-items: start;
+        gap: 30px;
+        padding: 50px 0;
+
+
+        .result {
+            background-color: $whitesmoke;
+            padding: 20px;
+            border-radius: $border-radius;
+            a {
+                color: $dark-color;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .result-card {
+                    display: flex;
+                    gap: 20px;
+
+                    img {
+                        max-width: 100px;
+                        max-height: 100px;
+                        object-fit: cover;
+                    }
+
+                    .result-content {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+}

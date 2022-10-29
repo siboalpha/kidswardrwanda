@@ -137,4 +137,32 @@
             }
         }
     }
+
+    //Search Results
+
+    .search-results {
+        padding-top: 150px;
+
+        .container {
+            width: 90%;
+
+            .result {
+                a {
+                    .result-card {
+                        img {
+                            max-width: 50px;
+                            max-width: 50px;
+                        }
+
+                        .result-content {
+                            .description {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }

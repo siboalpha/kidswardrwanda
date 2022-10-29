@@ -23,7 +23,7 @@ class Product(models.Model):
     ]
     title = models.CharField(max_length = 255)
     product_image = models.ImageField(upload_to = 'product_images', null = True)
-    placement = models.CharField(max_length = 255, choices = PLACEMENT_CHOICES, default = popular)
+    placement = models.CharField(max_length = 255, choices = PLACEMENT_CHOICES, default = recently_added)
     price = models.FloatField(max_length = 8)
     category = models.ForeignKey(productCategories,max_length = 255, on_delete = models.CASCADE)
     price = models.CharField(max_length = 255)

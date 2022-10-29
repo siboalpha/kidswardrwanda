@@ -103,4 +103,17 @@
     align-items: flex-start;
     gap: 20px;
   }
+  .search-results {
+    padding-top: 150px;
+  }
+  .search-results .container {
+    width: 90%;
+  }
+  .search-results .container .result a .result-card img {
+    max-width: 50px;
+    max-width: 50px;
+  }
+  .search-results .container .result a .result-card .result-content .description {
+    display: none;
+  }
 }/*# sourceMappingURL=mobile.css.map */

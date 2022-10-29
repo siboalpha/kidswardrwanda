@@ -56,3 +56,17 @@ def orderReceived(request, pk):
     print(total)
     context = {'order': order, 'total':total}
     return render(request, 'order-received.html', context)
+
+
+def search(request):
+    from django.db.models import Q
+    query = request.GET.get('q','')
+    if query:
+        queryset = (Q(title__icontains=query) | Q(description__icontains=query))
+        products = Product.objects.filter(queryset).distinct()
+        print(products)
+        context = {'products':products, 'query': query}
+
+        return render(request, 'search.html', context)
+    else:
+        return render(request, 'search.html')
