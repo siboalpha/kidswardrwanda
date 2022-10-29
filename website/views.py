@@ -7,6 +7,12 @@ def index(request):
     page_title = 'Kids World Rwanda | Welcome'
     products = Product.objects.all()
     form = ContactForm()
+    
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('thank-you')
     context = {'page_title':page_title, 'products':products, 'form':form}
     return render(request, 'index.html', context)
 

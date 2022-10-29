@@ -16,6 +16,6 @@ class productCategoriesAdmin(admin.ModelAdmin):
 class OrderAdmin(admin.ModelAdmin):
     list_display = ('product', 'client', 'client_phone_number','client_email', 'order_total')
 
-@admin.register(Contact)
+@admin.register(ContactMessage)
 class COntactAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'email', 'phone_number')
+    list_display = ('first_name', 'last_name', 'email', 'phone_number', 'date_created')

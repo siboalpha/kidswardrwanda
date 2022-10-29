@@ -1,7 +1,7 @@
 from dataclasses import field
 from django import forms
 from django.forms import ModelForm, TextInput, Textarea, Select, EmailInput
-from .models import Order, Contact
+from .models import Order, ContactMessage
 
 
 class OrderForm(ModelForm):
@@ -19,7 +19,7 @@ class OrderForm(ModelForm):
 
 class ContactForm(ModelForm):
     class Meta:
-        model = Contact
+        model = ContactMessage
         fields = {'first_name', 'last_name', 'email', 'phone_number','message'}
 
         widgets = {
