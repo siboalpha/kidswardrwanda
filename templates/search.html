@@ -5,22 +5,32 @@
 <section class="search-results">
     <div class="container">
         <h1 class="heading">Search Result for: {{query}}</h1>
+        {% if products %}
         {% for product in products %}
         <div class="result">
-            <a href="">
+            <a href="{% url 'product' product.id %}">
                 <div class="result-card">
-                    <img src="/img/rocking-horse.png" alt="">
+                    <img src="{{product.product_image.url}}" alt="">
                     <div class="result-content">
-                        <h4>Produtct title</h4>
-                        <p>5000Rwf</p>
-                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit vitae ipsa
-                            consequuntur, quo quisquam adipisci ducimus deleniti error. 
+                        <h4>{{product.title}}</h4>
+                        <p>{{product.price}}</p>
+                        <p class="description">
+                            {{product.description | slice:100}}
                         </p>
                     </div>
                 </div>
             </a>
         </div>
         {% endfor %}
+        {% else %}
+        <div class="result">
+            <a href="{% url 'index' %}">
+                <div class="result-card">
+                    Nothing found, please try different search
+                </div>
+            </a>
+        </div>
+        {% endif %}
     </div>
 </section>
 
