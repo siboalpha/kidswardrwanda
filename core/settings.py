@@ -14,10 +14,10 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 # Loading env lovally
-load_dotenv()
+#load_dotenv()
 
 #Loading env production
-#load_dotenv("/home/admin/oasis/core/.env")
+load_dotenv("/home/admin/kidswardrwanda/core/.env")
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
