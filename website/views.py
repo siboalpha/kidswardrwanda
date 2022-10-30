@@ -25,8 +25,8 @@ def shop(request):
     context = {'page_title': page_title, 'products':products}
     return render(request, 'shop.html', context)
 
-def product(request, pk):
-    product = Product.objects.get(id = pk)
+def product(request, slug):
+    product = Product.objects.get(slug = slug)
     product_title = product.title
     page_title =  product_title + ' | Kids World Rwanda'
     context = {'page_title': page_title, 'product':product}

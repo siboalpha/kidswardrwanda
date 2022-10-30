@@ -1,8 +1,6 @@
-from distutils.command.upload import upload
-from email.policy import default
-from operator import mod
-from unicodedata import category
 from django.db import models
+from django.shortcuts import redirect
+from django.urls import reverse
 
 # Create your models here.
 
@@ -22,6 +20,7 @@ class Product(models.Model):
         (popular, 'popular'),
     ]
     title = models.CharField(max_length = 255)
+    slug = models.SlugField(null = False, unique = True)
     product_image = models.ImageField(upload_to = 'product_images', null = True)
     placement = models.CharField(max_length = 255, choices = PLACEMENT_CHOICES, default = recently_added)
     price = models.FloatField(max_length = 8)
@@ -31,6 +30,9 @@ class Product(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('product', kwargs={"slug": self.slug})
 
 
 class Order(models.Model):

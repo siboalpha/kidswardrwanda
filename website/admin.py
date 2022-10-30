@@ -5,6 +5,7 @@ from .models import *
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('title', 'category')
+    prepopulated_fields = {"slug": ("title",)}
 
 
 @admin.register(productCategories)

@@ -68,7 +68,7 @@
                     </div>
                     <div class="pricing">
                         <p class="price">{{product.price}}Rwf</p>
-                        <a href="{% url 'product' product.id %}"><button class="buy-btn">Buy now <span><i
+                        <a href="{{product.get_absolute_url}}"><button class="buy-btn">Buy now <span><i
                                         class="fas fa-cart-plus"></i></span></button></a>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                     </div>
                     <div class="pricing">
                         <p class="price">{{product.price}}Rwf</p>
-                        <a href="{% url 'product' product.id %}"><button class="buy-btn">Buy now <span><i
+                        <a href="{{product.get_absolute_url}}"><button class="buy-btn">Buy now <span><i
                                         class="fas fa-cart-plus"></i></span></button></a>
                     </div>
                 </div>
