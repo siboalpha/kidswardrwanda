@@ -63,7 +63,7 @@
             <div class="product">
                 <img src="{{product.product_image.url}}" alt="" class="product-img">
                 <div class="product-data">
-                    <h4 class="title">{{product.title}}</h4>
+                    <h4 class="title">{{product.title | slice:40}}</h4>
                     <div class="summary">{{product.description | slice:80}}
                     </div>
                     <div class="pricing">
