@@ -14,17 +14,16 @@
             <div class="product">
                 <img src="{{product.product_image.url}}" alt="" class="product-img">
                 <div class="product-data">
-                    <h4 class="title">{{product.title}}</h4>
+                    <h4 class="title">{{product.title | slice:40}}</h4>
                     <div class="summary">{{product.description | slice:80}}
                     </div>
                     <div class="pricing">
                         <p class="price">{{product.price}}Rwf</p>
-                        <a href="{% url 'product' product.id %}"><button class="buy-btn">Buy now <span><i
+                        <a href="{{product.get_absolute_url}}"><button class="buy-btn">Buy now <span><i
                                         class="fas fa-cart-plus"></i></span></button></a>
                     </div>
                 </div>
             </div>
-
             {% endfor %}
 
         </div>
