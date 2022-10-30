@@ -435,4 +435,8 @@ footer .container .buttom .socials a {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+#order-form {
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */
